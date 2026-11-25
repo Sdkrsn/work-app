@@ -16,10 +16,32 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.sdkrsn.Work"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Let WorkOS attach a payslip photo to a payment record.",
+          "cameraPermission": "Let WorkOS take a photo of a payslip to attach to a payment record."
+        }
+      ],
+      "expo-notifications",
+      "expo-file-system"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7d965337-f6ed-44c2-81d1-33dca5bb2e2c"
+      }
     }
   }
 }
